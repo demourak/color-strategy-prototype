@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class color_strategy {
 
-    private static final String IMG_PATH = "H:\\GitHub\\color-strategy-prototype\\main\\src\\main\\resources\\map.jpg";
+    private static final String IMG_PATH = "C:\\Users\\Kevin\\IdeaProjects\\Color Strategy Prototype\\color-strategy-prototype\\main\\src\\main\\resources\\map.jpg";
 
     private static void makeGUI() throws IOException {
 
@@ -21,6 +21,7 @@ public class color_strategy {
 
         //Outer panel
         JPanel outer = new JPanel();
+
 
         //Bottom panel, pick colors
         JPanel colors = new JPanel();
@@ -34,16 +35,18 @@ public class color_strategy {
         ImageIcon icon = new ImageIcon(map);
         JLabel image = new JLabel(icon);
 
+
+
         //Panel with controls
         JPanel controls = new JPanel();
-        JComboBox firstColorFilter = new JComboBox();
-        JComboBox secondColorFilter = new JComboBox();
-        JComboBox airports1 = new JComboBox();
-        JComboBox airports2 = new JComboBox();
-        controls.add(firstColorFilter);
-        controls.add(airports1);
-        controls.add(secondColorFilter);
-        controls.add(airports2);
+        JComboBox constraintSelection = new JComboBox(new String[] {"Location"});
+        JComboBox constraintSelection2 = new JComboBox(new String[] {"Departure", "Arrival", "Overflight"});
+        JComboBox constraintSelection3 = new JComboBox(new String[] {"PHL", "LAX", "ORD", "ATL", "JFK"});
+        controls.add(constraintSelection);
+        controls.add(constraintSelection2);
+        controls.add(constraintSelection3);
+
+
 
         //Add all items to respective panels
         frame.add(outer);
@@ -67,7 +70,10 @@ public class color_strategy {
                 }
                 try {
                     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+                } catch (
+                        ClassNotFoundException | InstantiationException | IllegalAccessException |
+                                UnsupportedLookAndFeelException ex) {
+                    ex.printStackTrace();
                 }
             }
         });
