@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class color_strategy {
 
-    private static final String IMG_PATH = "resources\\map.jpg";
+    private static final String IMG_PATH = "main\\src\\main\\resources\\map.jpg";
 
     private static void makeGUI() throws IOException {
 
@@ -21,7 +21,9 @@ public class color_strategy {
 
         //Outer panel
         JPanel outer = new JPanel();
-
+        JPanel mapPanel = new JPanel();
+        JPanel side = new JPanel();
+        side.setLayout(new BoxLayout(side, BoxLayout.PAGE_AXIS));
 
         //Bottom panel, pick colors
         JPanel colors = new JPanel();
@@ -32,7 +34,8 @@ public class color_strategy {
 
         //Image of map
         BufferedImage map = ImageIO.read(new File(IMG_PATH));
-        ImageIcon icon = new ImageIcon(map);
+        Image scaledMap = map.getScaledInstance(800, -1, Image.SCALE_FAST);
+        ImageIcon icon = new ImageIcon(scaledMap);
         JLabel image = new JLabel(icon);
 
 
@@ -51,10 +54,13 @@ public class color_strategy {
         //Add all items to respective panels
         frame.add(outer);
         outer.add(image);
-        outer.add(controls);
-        outer.add(colors);
+        image.add(mapPanel);
+        outer.add(side);
+        side.add(controls);
+        side.add(colors);
         colors.add(redColor);
         colors.add(greenColor);
+
 
         frame.pack();
         frame.setVisible(true);
