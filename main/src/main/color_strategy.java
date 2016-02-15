@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class color_strategy {
 
-    private static final String IMG_PATH = "C:\\Users\\Kevin\\IdeaProjects\\Color Strategy Prototype\\color-strategy-prototype\\main\\src\\main\\resources\\map.jpg";
+    private static final String IMG_PATH = "resources\\map.jpg";
 
     private static void makeGUI() throws IOException {
 
