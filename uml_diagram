@@ -1,0 +1,25 @@
+<diagram program="umletino" version="14.1"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>0</x><y>440</y><w>60</w><h>110</h></coordinates><panel_attributes>Analyst</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>90</x><y>460</y><w>130</w><h>50</h></coordinates><panel_attributes>Choose Constraints</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>460</y><w>80</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;60;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>430</y><w>360</w><h>120</h></coordinates><panel_attributes>ColorAssigner
+--
+-constraint: Constraint
+--
++assignColors(constraint:Constraint, List&lt;Track&gt;: tracks): void
+--
+Responsibilities
+-- Choose which tracks fit the given constraint and set the colors
+   of those tracks.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>240</x><y>340</y><w>190</w><h>60</h></coordinates><panel_attributes>Choose Category Constraint</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>240</x><y>590</y><w>190</w><h>60</h></coordinates><panel_attributes>Choose Heatmap Constraint</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>360</y><w>100</w><h>150</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>30;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>480</y><w>100</w><h>160</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>30;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>360</y><w>70</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;50;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1010</x><y>240</y><w>140</w><h>120</h></coordinates><panel_attributes>Track
+--
+-color: Color
+-List&lt;Coordinate&gt;
+-departureAirport: Airport
+-arrivalAirport: Airport
+-model: Aircraft</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1070</x><y>350</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1030</x><y>120</y><w>100</w><h>30</h></coordinates><panel_attributes>Color</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1070</x><y>140</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>120</y><w>100</w><h>30</h></coordinates><panel_attributes>Airport</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>120</y><w>100</w><h>30</h></coordinates><panel_attributes>Coordinate</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>140</y><w>290</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;270;100</additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>140</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;140;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1070</x><y>140</y><w>180</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>160;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>350</y><w>360</w><h>130</h></coordinates><panel_attributes>CategoricalConstraint
+--
+-departureAirports: List&lt;Airport&gt;
+-arrivalAirports: List&lt;Airport&gt;
+-aircraftModels: List&lt;Aircraft&gt;
+-altitudeLow: int
+-altitudeHigh: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1180</x><y>120</y><w>100</w><h>30</h></coordinates><panel_attributes>Aircraft</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>400</y><w>100</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;80;90</additional_attributes></element></diagram>
